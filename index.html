@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#142338">
+  <meta name="description" content="Completa tu análisis inicial DCU, conserva el borrador y descarga la ficha Markdown para entregarla en Canvas.">
+  <title>Análisis inicial DCU · Cuaderno de diseño</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#sections">Ir a la ficha</a>
+  <header class="masthead"><div class="container"><p class="eyebrow">DISEÑO Y DESARROLLO / TEMA 2.1.1</p><p class="brand">Cuaderno de diseño <span>DCU</span></p></div></header>
+  <main class="container">
+    <section class="hero" aria-labelledby="title"><p class="eyebrow">COMPRENDER → ANALIZAR → JUSTIFICAR → REVISAR</p><h1 id="title">Primero las personas.<br>Después, las decisiones.</h1><p>Tu ficha de análisis inicial DCU, paso a paso. Escribe respuestas breves, distingue lo que sabes de lo que supones y vuelve cuando necesites continuar.</p><div class="badges"><span>Individual</span><span>Mobile-first</span><span>Entrega en Markdown</span></div></section>
+    <aside class="notice"><strong>Este es un borrador local, no una entrega.</strong><p>Se guarda en este navegador y dispositivo, no en la nube. Borrar sus datos o usar navegación privada puede hacerte perder el trabajo. Descarga copias periódicamente. Para continuar en otro dispositivo, importa tu archivo .md. Al terminar, súbelo tú a Canvas.</p></aside>
+    <div class="toolbar" aria-label="Herramientas del borrador"><button id="download" class="primary" disabled>Descargar análisis .md</button><label class="button" for="import">Importar .md</label><input id="import" class="sr-only" type="file" accept=".md,text/markdown,text/plain"><a class="button" href="plantilla.md" download="ficha-analisis-inicial-dcu.md">Plantilla original</a><button id="reset" class="quiet" disabled>Nuevo análisis</button></div>
+    <p id="status" role="status" aria-live="polite">Cargando la plantilla…</p>
+    <section class="progress-panel" aria-label="Progreso orientativo"><label for="progress">Progreso de escritura <span id="count"></span></label><progress id="progress" max="100" value="0"></progress><p>Cuenta respuestas escritas, no su calidad. No es una nota ni un requisito adicional. Puedes exportar aunque queden campos pendientes.</p></section>
+    <details class="guide"><summary>Antes de empezar: qué sabemos y qué suponemos</summary><div><dl><dt>Indicado en el enunciado</dt><dd>El texto lo dice expresamente. No equivale a haber observado el servicio real.</dd><dt>Suposición pendiente de comprobar</dt><dd>Una interpretación razonable aún no contrastada. Indica por qué la planteas y cómo la comprobarías.</dd><dt>Desconocido</dt><dd>Falta información: di qué necesitas averiguar, sin inventarlo.</dd><dt>Evidencia obtenida</dt><dd>Úsala solo si has investigado o comprobado algo realmente y puedes indicar fuente, método, fecha y límites.</dd></dl><p>«Caso» equivale a «Indicado en el enunciado» y «Hipótesis» a «Suposición pendiente de comprobar». Utiliza preferentemente las etiquetas completas.</p><p>No inventes entrevistas ni resultados. No incluyas datos personales de terceros, documentos de impresión, contraseñas ni información confidencial. Identifica tu autoría solo como pide la actividad.</p></div></details>
+    <details class="guide"><summary>El reto de esta actividad: ¿está lista mi impresión?</summary><div><p>La reprografía universitaria entrega un número por encargo. Para saber si está preparado, el estudiante debe acudir al mostrador y preguntar. El personal consulta una lista con estados pendiente, listo para recoger o recogido. Algunas visitas son demasiado pronto y estas consultas interrumpen la preparación de otros encargos.</p><p><strong>Analiza cómo facilitar que el estudiante conozca el estado antes de desplazarse.</strong> Conoce su número y el personal mantiene el estado actualizado. No estudies envío de documentos, pago, impresión ni entrega física. Incluye la consulta de un número no encontrado.</p><p>La herramienta no resuelve el ejercicio por ti. Conserva todos los apartados, escribe respuestas breves y consulta en Canvas el enunciado y los criterios sobre 10 puntos. No necesitas investigar con personas, programar ni diseñar pantallas.</p></div></details>
+    <nav id="navigation" aria-label="Apartados de la ficha"></nav>
+    <form id="sections" aria-label="Ficha de análisis inicial DCU"><p>Preparando los apartados…</p></form>
+    <noscript><p>Esta herramienta necesita JavaScript para editar y guardar el borrador. Puedes descargar la <a href="plantilla.md">plantilla Markdown</a> y completarla con un editor de texto.</p></noscript>
+    <footer><p>La herramienta no envía tus respuestas a un servidor ni las entrega en Canvas. La descarga conserva los apartados de la plantilla y puede volver a importarse.</p><p><a href="https://campus.europaeducationgroup.es/courses/167035/assignments/1102240" target="_blank" rel="noopener noreferrer">Volver a la tarea en Canvas ↗</a> · <a href="https://github.com/cia2000/webform-analisis-inicial-dcu">Código y documentación</a></p></footer>
+  </main>
+  <dialog id="confirmation"><form method="dialog"><h2 id="dialog-title">¿Sustituir el borrador?</h2><p id="dialog-message"></p><p>Descarga primero una copia si quieres conservarlo.</p><div class="toolbar"><button value="cancel" autofocus>Cancelar</button><button value="confirm" class="danger">Sustituir borrador</button></div></form></dialog>
+</body>
+</html>
