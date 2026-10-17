@@ -7,6 +7,7 @@
   <meta name="description" content="Completa tu análisis inicial DCU, conserva el borrador y descarga la ficha Markdown para entregarla en Canvas.">
   <title>Análisis inicial DCU · Cuaderno de diseño</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="floating-navigation.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
@@ -25,6 +26,7 @@
     <noscript><p>Esta herramienta necesita JavaScript para editar y guardar el borrador. Puedes descargar la <a href="plantilla.md">plantilla Markdown</a> y completarla con un editor de texto.</p></noscript>
     <footer><p>La herramienta no envía tus respuestas a un servidor ni las entrega en Canvas. La descarga conserva los apartados de la plantilla y puede volver a importarse.</p><p><a href="https://campus.europaeducationgroup.es/courses/167035/assignments/1102240" target="_blank" rel="noopener noreferrer">Volver a la tarea en Canvas ↗</a> · <a href="https://github.com/cia2000/webform-analisis-inicial-dcu">Código y documentación</a></p></footer>
   </main>
+  <button id="back-to-sections" class="floating-sections" type="button" aria-controls="navigation" aria-label="Volver a los botones de las secciones" disabled><span aria-hidden="true">↑</span> Secciones</button>
   <dialog id="confirmation"><form method="dialog"><h2 id="dialog-title">¿Sustituir el borrador?</h2><p id="dialog-message"></p><p>Descarga primero una copia si quieres conservarlo.</p><div class="toolbar"><button value="cancel" autofocus>Cancelar</button><button value="confirm" class="danger">Sustituir borrador</button></div></form></dialog>
 </body>
 </html>

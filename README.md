@@ -9,6 +9,7 @@ Formulario estático, mobile-first y sin dependencias de ejecución para complet
 - Descargar periódicamente el Markdown. Importar ese archivo permite continuar en otro dispositivo. La importación sustituye el borrador previa confirmación si hay trabajo; no mezcla versiones.
 - Entregar el `.md` en Canvas manualmente. El progreso cuenta respuestas escritas: no comprueba calidad ni puntúa.
 - Se puede seguir usando la plantilla sin la herramienta. No se exige contestar mediante esta web.
+- El botón flotante «↑ Secciones» vuelve al índice de apartados desde cualquier punto del formulario. Respeta la preferencia de movimiento reducido y sitúa el foco en el primer enlace para facilitar la navegación con teclado.
 
 ## Plantilla e intercambio
 

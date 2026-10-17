@@ -84,6 +84,14 @@ $('#sections').addEventListener('click', async e => {
 $('#navigation').addEventListener('click', e => {
   const link = e.target.closest('a'); if (link) document.querySelector(link.getAttribute('href')).open = true;
 });
+$('#back-to-sections').addEventListener('click', () => {
+  const navigation = $('#navigation');
+  navigation.querySelector('a')?.focus({preventScroll:true});
+  navigation.scrollIntoView({
+    behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+    block: 'start',
+  });
+});
 $('#download').addEventListener('click', () => {
   const content = markdown(data, schema);
   const url = URL.createObjectURL(new Blob([content], {type:'text/markdown;charset=utf-8'}));
@@ -117,7 +125,7 @@ async function init() {
       const saved = localStorage.getItem(KEY);
       if (saved) data = validate(JSON.parse(saved), schema);
     } catch { storageBlocked = true; warning = 'No se ha podido recuperar el guardado local. No se sobrescribirá. Importa una copia .md o inicia un nuevo análisis; descarga lo que escribas para conservarlo.'; }
-    render(); $('#download').disabled = false; $('#reset').disabled = false;
+    render(); $('#download').disabled = false; $('#reset').disabled = false; $('#back-to-sections').disabled = false;
     status(warning || 'Borrador listo. Los cambios se guardarán en este navegador.', !!warning);
   } catch (error) { status(`${error.message} Puedes descargar la plantilla original y completarla con un editor de texto.`, true); $('#sections').textContent = 'No se ha podido abrir el formulario.'; }
 }

@@ -88,3 +88,20 @@ test('otra pestaña no sobrescribe el borrador sin avisar', async ({page, contex
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('analisis-inicial-dcu-v1')));
   expect(saved.tables['table-0'][0][1]).toBe('Cambio desde segunda pestaña');
 });
+for (const reducedMotion of ['no-preference', 'reduce']) {
+  test(`botón flotante vuelve al índice en móvil: ${reducedMotion}`, async ({page}) => {
+    await page.setViewportSize({width:390,height:844});
+    await page.emulateMedia({reducedMotion});
+    await page.evaluate(() => {
+      document.querySelectorAll('.report-section').forEach(section => { section.open = true; });
+      window.scrollTo({top:document.body.scrollHeight,behavior:'instant'});
+    });
+    const button = page.getByRole('button', {name:'Volver a los botones de las secciones'});
+    await expect(button).toBeInViewport();
+    await button.click();
+    await expect(page.locator('#navigation a').first()).toBeFocused();
+    await expect.poll(async () => Math.round((await page.locator('#navigation').boundingBox()).y)).toBeGreaterThanOrEqual(0);
+    await expect.poll(async () => Math.round((await page.locator('#navigation').boundingBox()).y)).toBeLessThan(40);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  });
+}
